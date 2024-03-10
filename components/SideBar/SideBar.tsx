@@ -8,7 +8,7 @@ export interface IAppProps {
 
 export default function App(props: IAppProps) {
   return (
-    <div className="  rounded-lg flex flex-col gap-2  overflow-hidden  h-full md:hidden !w-[300px] ">
+    <div className=" rounded-lg flex flex-col gap-2  overflow-hidden  h-full max_900:hidden !w-[300px] ">
       <MainRoutes />
       <Library />
     </div>

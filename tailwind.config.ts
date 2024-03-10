@@ -9,10 +9,16 @@ const config: Config = {
   theme: {
     extend: {},
     screens: {
-      'xs': { 'max': '350px' },
-      'sm': {  'max': '600px' },
-      'md': {  'max': '900px' },
-      'lg': {  'max': '1200px' },
+      xs: { max: "350px" },
+      sm: { min: "350px", max: "600px" },
+      md: { min: "600px", max: "900px" },
+      lg: { min: "900px", max: "1200px" },
+      xl: { min: "1200px", max: "1500px" },
+      xxl: { min: "1500px" },
+      max_600: { max: "600px" },
+      max_900: { max: "900px" },
+      max_1200: { max: "1200px" },
+      max_1500: { max: "1500px" },
       
     },
   },

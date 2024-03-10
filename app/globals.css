@@ -13,3 +13,8 @@ html , body :root{
 :root{
   --primary: red;
 }
+
+ /* scrollbar hide scroll bar background*/
+ ::-webkit-scrollbar {
+  display: none;
+}
