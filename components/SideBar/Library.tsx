@@ -9,6 +9,8 @@ import { useUser } from '@/hooks/useUser';
 import useUploadModal from '@/hooks/useUploadModal';
 import getSongsByUserId from '@/actions/getSongsByUserId';
 import { Song } from '@/types';
+import useLoadImage from '@/hooks/useLoadImage';
+import UserSongsCard from './UserSongsCard'
 
 
 export interface IAppProps {
@@ -37,7 +39,23 @@ export default  function App ({userSongs}: IAppProps) {
       </button>
       </div>
 
-      <h1>list of songs</h1>
+      {
+        userSongs.length === 0 ? (
+          <h1>No songs</h1>
+        ):
+        (
+          userSongs.map((song) => (
+            <div key={song.id} className='my-3'>
+              <UserSongsCard
+                title={song.title}
+                author={song.author}
+                image_path={song.image_path}
+                song_path={song.song_path}
+              />
+            </div>
+          ))
+        )
+      }
     </div>
   );
 }

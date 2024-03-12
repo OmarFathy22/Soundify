@@ -60,7 +60,7 @@ export default async function App (props: IAppProps) {
   return (
     <div className="p-5">
       <h1 className="font-bold text-[25px] mb-3">Newest songs</h1>
-      <ul className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 xxl:grid-cols-5 gap-4">
+      <ul className="grid grid-cols-1  xs:!grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 xxl:grid-cols-5 gap-4">
       {songs.map((song) => (
         <li key={song.id}>
           <SongCard
