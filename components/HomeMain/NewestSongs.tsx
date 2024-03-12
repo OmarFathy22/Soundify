@@ -1,8 +1,12 @@
 import * as React from "react";
 import SongCard from "./SongsCard";
+import getSongs from "@/actions/getSongs";
 export interface IAppProps {}
 
-export default function App(props: IAppProps) {
+export const revalidate = 0;
+
+export default async function App (props: IAppProps) {
+  const songs = await getSongs();
   const newestSongs = [
     {
       id: 1,
@@ -57,13 +61,14 @@ export default function App(props: IAppProps) {
     <div className="p-5">
       <h1 className="font-bold text-[25px] mb-3">Newest songs</h1>
       <ul className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 xxl:grid-cols-5 gap-4">
-      {newestSongs.map((song) => (
+      {songs.map((song) => (
         <li key={song.id}>
           <SongCard
             key={song.id}
-            name={song.name}
-            artist={song.artist}
-            img={song.img}
+            title={song.title}
+            author={song.author}
+            image_path={song.image_path}
+            song_path = {song.song_path}
           />
         </li>
       ))}

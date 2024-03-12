@@ -7,15 +7,19 @@ import useAuthModal from '@/hooks/useAuthModal';
 import AuthModal from '../AuthModal';
 import { useUser } from '@/hooks/useUser';
 import useUploadModal from '@/hooks/useUploadModal';
+import getSongsByUserId from '@/actions/getSongsByUserId';
+import { Song } from '@/types';
 
 
 export interface IAppProps {
+  userSongs: Song[]
 }
 
-export default function App (props: IAppProps) {
+export const revalidate = 0;
+export default  function App ({userSongs}: IAppProps) {
   const authModal = useAuthModal();
   const uploadModal = useUploadModal();
-
+  
   const {user} = useUser();
    const onClick = () => {
      if(!user) {
@@ -32,6 +36,8 @@ export default function App (props: IAppProps) {
          <FaPlus className='text-neutral-500 hover:text-white transition-all cursor-pointer'/>
       </button>
       </div>
+
+      <h1>list of songs</h1>
     </div>
   );
 }
