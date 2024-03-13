@@ -10,7 +10,7 @@ import useUploadModal from '@/hooks/useUploadModal';
 import getSongsByUserId from '@/actions/getSongsByUserId';
 import { Song } from '@/types';
 import useLoadImage from '@/hooks/useLoadImage';
-import UserSongsCard from './UserSongsCard'
+import UserSongsCard from './UserSongsCardLibrary'
 
 
 export interface IAppProps {
@@ -47,6 +47,7 @@ export default  function App ({userSongs}: IAppProps) {
           userSongs.map((song) => (
             <div key={song.id} className='my-3'>
               <UserSongsCard
+                songId={song.id}
                 title={song.title}
                 author={song.author}
                 image_path={song.image_path}
