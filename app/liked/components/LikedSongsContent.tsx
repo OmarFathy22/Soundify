@@ -8,10 +8,9 @@ import SongCard from '../../../components/SideBar/UserSongsCardSearch'
 
 export interface IAppProps {
   songs: Song[]
-  song: Song
 }
 
-export default function App ({song , songs}: IAppProps) {
+export default function App ({songs}: IAppProps) {
   const router = useRouter();
   const {isLoading , user} = useUser();
 
