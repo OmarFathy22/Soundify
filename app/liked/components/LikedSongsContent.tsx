@@ -4,12 +4,14 @@ import { useUser } from '@/hooks/useUser';
 import { Song } from '@/types';
 import { useRouter } from 'next/navigation';
 import * as React from 'react';
+import SongCard from '../../../components/SideBar/UserSongsCardSearch'
 
 export interface IAppProps {
   songs: Song[]
+  song: Song
 }
 
-export default function App ({songs}: IAppProps) {
+export default function App ({song , songs}: IAppProps) {
   const router = useRouter();
   const {isLoading , user} = useUser();
 
@@ -21,12 +23,14 @@ export default function App ({songs}: IAppProps) {
 
   if(songs?.length === 0){
     return (
-      <div className='text-neutral-400'>No songs found</div>
+      <div className='px-5 text-neutral-400'>No songs found</div>
     )
   }
   return (
     <div className='px-5'>
-      favorite songs
+      {songs?.map((song) => (
+        <SongCard key={song?.id} song={song} songs={songs}/>
+      ))}
     </div>
   );
 }

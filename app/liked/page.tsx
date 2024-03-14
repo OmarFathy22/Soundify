@@ -24,13 +24,13 @@ const Liked = async () => {
         <AuthButtons />
       </div>
 
-      <div className="flex items-center gap-3 mt-10">
+      <div className="flex xs:flex-col items-center gap-3 mt-10">
         <div className="h-[84px] w-[84px]">
           <Image src="/liked.png" alt="liked" width={200} height={200}/>
         </div>
         <div>
-          <p className="text-neutral-400">playlist</p>
-          <h1 className="text-4xl font-bold">Favorite Songs</h1>
+          <p className="text-neutral-400 xs:text-center">playlist</p>
+          <h1 className="text-4xl font-bold xs:text-center">Favorite Songs</h1>
         </div>
         
       </div>

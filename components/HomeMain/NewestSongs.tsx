@@ -1,6 +1,8 @@
 import * as React from "react";
 import SongCard from "./SongsCard";
 import getSongs from "@/actions/getSongs";
+import useOnPlay from "@/hooks/useOnPlay";
+
 export interface IAppProps {}
 
 export const revalidate = 0;
@@ -65,10 +67,9 @@ export default async function App (props: IAppProps) {
         <li key={song.id}>
           <SongCard
             key={song.id}
-            title={song.title}
-            author={song.author}
-            image_path={song.image_path}
-            song_path = {song.song_path}
+            data={song}
+            songs={songs}
+            
           />
         </li>
       ))}

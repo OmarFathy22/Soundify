@@ -127,7 +127,7 @@ const UploadModal = () => {
     >
       <form 
         onSubmit={handleSubmit(onSubmit)} 
-        className="flex flex-col gap-y-4"
+        className="flex flex-col gap-y-4 mt-3"
       >
         <Input
           id="title"

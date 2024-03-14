@@ -41,7 +41,7 @@ export default function App(props: IAppProps) {
         </button>
         <button
           onClick={authModal.onOpen}
-          className="p-1 px-3 bg-[white] font-bold text-[#111] rounded-full hover:opacity-80 transition-all"
+          className="p-3 px-3 bg-[white] font-bold text-[#111] rounded-full hover:opacity-80 transition-all"
         >
           <FaUserAlt/>
         </button>
