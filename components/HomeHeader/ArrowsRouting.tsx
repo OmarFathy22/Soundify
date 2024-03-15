@@ -16,6 +16,12 @@ export default function App (props: IAppProps) {
   const handleBack = () => {
     router.back()
   }
+  const handleHome = () => {
+    router.push("/")
+  }
+  const handleSearch = () => {
+    router.push("/search")
+  }
   return (
     <div>
       <div className='flex gap-2 max_900:hidden'>
@@ -28,10 +34,10 @@ export default function App (props: IAppProps) {
       </div>
 
       <div className='hidden max_900:flex gap-2'>
-        <button onClick={handleBack} className='p-2 bg-[white] text-black rounded-full hover:opacity-80 transition-all'>
+        <button onClick={handleHome} className='p-2 bg-[white] text-black rounded-full hover:opacity-80 transition-all'>
           <HiHome size={20} className=''/>
         </button>
-        <button onClick={handleNext} className='p-2 bg-[white] text-black rounded-full hover:opacity-80 transition-all'>
+        <button onClick={handleSearch} className='p-2 bg-[white] text-black rounded-full hover:opacity-80 transition-all'>
           <BiSearch size={20} className=''/>
         </button>
       </div>

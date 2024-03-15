@@ -1,3 +1,5 @@
+"use client"
+import { useUser } from '@supabase/auth-helpers-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import * as React from 'react';
@@ -8,6 +10,8 @@ export interface IAppProps {
 }
 
 export default function App (props: IAppProps) {
+  const user = useUser();
+  if(!user) return null
   return (
     <Link href={'/liked'} className='flex items-center  group overflow-hidden cursor-pointer    hover:bg-emerald-100/40 transition-all bg-emerald-100/30 rounded-lg max-w-[300px] '>
       <div className=''>
