@@ -39,12 +39,12 @@ export default function App(props: IAppProps) {
           >
           Log out
         </button>
-        <button
+        {/* <button
           onClick={authModal.onOpen}
           className="p-3 px-3 bg-[white] font-bold text-[#111] rounded-full hover:opacity-80 transition-all"
         >
           <FaUserAlt/>
-        </button>
+        </button> */}
       </>
       ) : (
         <>

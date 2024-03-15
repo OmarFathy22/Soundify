@@ -46,7 +46,7 @@ export default  function App ({userSongs}: IAppProps) {
         <div className='px-5 '>
           {
             userSongs?.length === 0 ? (
-              <h1>No songs</h1>
+              <h1 className='text-neutral-400 mt-2'>No songs</h1>
             ):
             (
               userSongs?.map((song) => (
