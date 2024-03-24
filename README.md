@@ -1,5 +1,5 @@
-#Soundify
-#### music streaming platform that replicates the core functionality of ---Spotify.
+# Soundify
+#### music streaming platform that replicates the core functionality of --- Spotify.
 
 ## Getting Started
 
