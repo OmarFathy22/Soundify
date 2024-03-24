@@ -1,5 +1,5 @@
-<h1>Soundify</h1>
-<h4> music streaming platform that replicates the core functionality of <b>Spotify.</b></h4>
+#Soundify
+#### music streaming platform that replicates the core functionality of ---Spotify.
 
 ## Getting Started
 
